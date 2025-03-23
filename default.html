@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>You are an Idiot! (dot org)</title>
+    <link rel="stylesheet" href="Styl3.css">
+</head>
+<body onload="init();">
+    <p id="idiot">you are an idiot</p>
+    <img src="smile-white.png" alt="">
+    <img src="smile-white.png" alt="">
+    <img src="smile-white.png" alt="">
+</body>
+</html>
+<script src="scr3pt.js">
+ window.onload = function() {
+  var audioElem = document.getElementById("idiot.mp3");
+  var amplifiedAudio = amplifyMedia(audioElem, 2);
+  audioElem.play();
+  console.log("Initial amplification:", amplifiedAudio.getAmpLevel());
+  amplifiedAudio.amplify(1.5);
+  console.log("New amplification:", amplifiedAudio.getAmpLevel());
+};
+</script>
+<audio src="idiot.mp3" autoplay="true" loop hidden></audio>
+
+<audio autoplay="true" loop hidden >
+
+  <source src="idiot.mp3" type="audio/mpeg">
+
+  Your browser does not support the audio element.
+</audio>
